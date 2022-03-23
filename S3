@@ -1,0 +1,17 @@
+1. What is Amazon S3?
+Amazon S3 acts as a storage serveice that allows the industry leading scalibility.We can use s3 for storing and recovering a cerain amount at any point from anywhere on the web.
+We can store unlimited amount of data and number of objects, the objects size can be a range between 0 bytes to 5 terabytes.We can perform tasks relating to AWS management console, easy and automatic web interface.
+Amazon S3 is a scalable, high speed , low cost web based service that is designed for online backup and archiving data and application programs
+Amazon S3 helps to manage data for cost optimization, access control, and compliance.
+
+2. What are some critical differences between AWS S3 and EBS?
+3. How do you allow a user to gain access to a specific bucket?
+4. What is Amazon S3 Replication?
+5. Name the Storage Classes available in Amazon S3?
+1. Storage Classes available are as follows: 
+2. Amazon S3 Standard - Acts as a default storage class, if none specified during upload.
+3. Amazon S3 Standard-Infrequent Access - Helps in accessing data less frequently but need rapid access.
+4. Amazon S3 Reduced Redundancy Storage - Helps in reproducing data at lower levels of redundancy than Amazon S3's standard storage.
+5. Amazon Glacier - Helps in providing storage for data archiving and backup.
+
+6. What is Elastic Block Store?
