@@ -5,8 +5,11 @@ Amazon S3 is a scalable, high speed , low cost web based service that is designe
 Amazon S3 helps to manage data for cost optimization, access control, and compliance.
 
 2. What are some critical differences between AWS S3 and EBS?
+
 3. How do you allow a user to gain access to a specific bucket?
+
 4. What is Amazon S3 Replication?
+
 5. Name the Storage Classes available in Amazon S3?
 1. Storage Classes available are as follows: 
 2. Amazon S3 Standard - Acts as a default storage class, if none specified during upload.
@@ -15,3 +18,10 @@ Amazon S3 helps to manage data for cost optimization, access control, and compli
 5. Amazon Glacier - Helps in providing storage for data archiving and backup.
 
 6. What is Elastic Block Store?
+EBS (Amazon Elastic Block Storage) is a system used in storing persistent data it is also suitable for EC2 instances by providing highly available block level storage volumes.
+
+7. What are the types of EBS Volume?
+There are three types of EBS Volume:
+- EBS General Purpose (SSD) - This volume works for small and medium workloads like Root disc EC2.
+- Provisioned IOPS (SSD) - This volume works for the most demanding I/O intensive and large workloads like Hadoop workload.
+- EBS Magnetic Volumes - It is also known as standard volumes.It works for ideal workloads like data backups and log storage.
