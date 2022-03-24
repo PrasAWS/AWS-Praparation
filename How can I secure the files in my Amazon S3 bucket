@@ -1,0 +1,8 @@
+Refer: https://aws.amazon.com/premiumsupport/knowledge-center/secure-s3-resources/
+
+Short description
+To make sure your files and Amazon S3 buckets are secure, follow these best practices:
+
+Restrict access to your S3 resources: When using AWS, restrict access to your resources to the people that absolutely need it. Follow the principle of least privilege.
+Monitor your S3 resources: Monitor your resources using AWS CloudTrail logs, S3 server access logging, AWS Config, AWS Identity and Access Management (IAM) Access Analyzer, Amazon Macie, Amazon CloudWatch, or AWS Trusted Advisor's S3 bucket permissions check.
+Use encryption to protect your data: Amazon S3 supports encryption during transmission, server-side encryption (SSE), and client-side encryption.
