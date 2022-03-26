@@ -1,0 +1,227 @@
+https://medium.com/analytics-vidhya/amazon-s3-storage-classes-d77de43df23d
+
+Amazon S3 offers a range of storage classes designed for different use cases. These provide us the storage for data that is rarely used, doesn’t require instant access, long-term archive, digital preservation, and many more. All Amazon S3 storage classes have a high level of reliability and support SSL data encryption during transmission, but differ by their cost.S3 also regularly verifies the integrity of your data using checksums and provides auto healing capability. S3 storage classes allows lifecycle management/policy for automatic migration of objects for cost savings.
+
+The different storage classes provided are:
+S3 Standard
+S3 Standard-IA
+S3 Intelligent-Tiering
+S3 One Zone-IA
+S3 Glacier
+S3 Glacier Deep Archive
+S3 Outposts
+
+
+S3 Standard (General purpose)
+=================================
+Features: 
+-------------
+Fully managed
+Store in buckets
+Versioning
+Access control lists and bucket policies
+AES-256 bit encryption at rest. Supports SSL for data in transit and encryption of data at rest
+Private by default, S3 Standard is the default storage class, if nothing is specified during upload.
+
+Best used for:
+Performance:
+--------------
+Built to scale storage, requests, and users to support an unlimited number of web-scale applications
+
+Durability and Availability
+-------------------------------
+S3 Standard offers high durability, availability, and performance object storage for frequently accessed data.
+S3 Standard delivers low latency and high throughput.
+
+Data is stored in multiple locations. S3 standard is Resilient against events that impact an entire Availability Zone and is designed to sustain the loss of data in a two facilities.
+
+Designed for 99.99% availability over a given year
+
+Scalability and Elasticity
+-------------------------------
+Offers a high level of scalability & elasticity automatically
+Supports an infinite number of files in any bucket
+
+Pricing:
+-------------
+S3 Standard is the most expensive storage class among all others.
+
+A real-time Use case
+--------------------------
+S3 Standard has a wide range of use cases from cloud applications ,dynamic websites, web services, websites hosting, big data analytics, mobile gaming, and content distribution.
+
+
+
+
+S3 Intelligent-Tiering (Unknown or changing access)
+=====================================================
+
+Features:
+----------------
+S3 Intelligent Tiering storage class is designed to optimize storage costs by automatically moving data to the most cost-effective storage access tier, without performance impact or operational overhead.
+
+Best used for:
+------------------
+A frequent access tier and a lower-cost infrequent access tier, when access patterns change.
+Ideal to optimize storage costs automatically for long-lived data when access patterns are unknown or unpredictable.
+For a small monthly monitoring and automation fee per object, S3 moves objects that have not been accessed for 30 consecutive days to the infrequent access tier. If the object is accessed then it is automatically moved back to the frequent access tier.
+
+Performance:
+-----------------
+Suitable for larger objects greater than 128 KB (smaller objects are charged for 128 KB only) kept for at least 30 days (charged for minimum 30 days).
+Small monthly monitoring and auto-tiering charge.
+
+Durability and Availability:
+-------------------------------
+The durability of 99.999999999% and availability of 99.99% availability over a given year of objects across AZs.
+
+Scalability and Elasticity:
+-----------------------------
+
+Pricing:
+----------------
+No retrieval fees or additional tiering fees are using the S3 Intelligent-Tiering storage class.
+Low latency and high throughput performance.
+
+A real-time Use case:
+-------------------------
+Ideal to optimize storage costs automatically for long-lived data when access patterns are unknown or unpredictable.
+
+
+S3 Standard-IA ( Infrequent access)
+======================
+
+Features:
+----------------
+
+Best used for:
+------------------
+For backups and older data where access is limited, but the use case still demands high performance
+Ideal for use for the primary or only copy of data that can’t be recreated.
+
+Performance:
+-----------------
+
+Durability and Availability:
+-------------------------------
+High durability, Low latency and high throughput performance of S3 Standard but has a low per GB storage price and per GB retrieval fee. .
+Designed for durability of 99.999999999% of objects across multiple Availability Zones.
+Data stored redundantly across multiple geographically separated AZs and are resilient to the loss of an Availability Zone
+
+Scalability and Elasticity:
+-----------------------------
+offers greater availability and resiliency than the ONEZONE_IA class.
+
+Pricing:
+----------------
+Less expensive than S3 Standard storage.
+
+A real-time Use case:
+-------------------------
+The S3 Standard-IA is ideal for backups, long-term storage, and as a data store for disaster recovery.
+
+
+S3 One Zone-Infrequent Access (S3 One Zone-IA)
+====================================================
+
+Features:
+----------------
+S3 One Zone-Infrequent Access storage classes are designed for long-lived and infrequently accessed data, but available for millisecond access (similar to the STANDARD and STANDARD_IA storage class)
+
+Objects are available for real-time access
+
+Best used for:
+------------------
+Data is not resilient to the physical loss of the AZ resulting from disasters, such as earthquakes and floods.
+Suitable for larger objects greater than 128 KB (smaller objects are charged for 128 KB only) kept for at least 30 days (charged for minimum 30 days)
+
+Performance:
+-----------------
+ but it is less available and less resilient.
+
+Durability and Availability:
+-------------------------------
+Designed for 99.999999999% i.e. 11 9’s Durability of objects in a single AZ
+Designed for 99.5% availability over a given year
+
+Scalability and Elasticity:
+-----------------------------
+
+Pricing:
+----------------
+S3 charges a retrieval fee for these objects, so they are most suitable for infrequently accessed data.
+One Zone-Infrequent Access storage class is as durable as Standard-Infrequent Access,
+
+A real-time Use case:
+-------------------------
+Ideal when the data can be recreated if the AZ fails, and for object replicas when setting cross-region replication (CRR).
+
+S3 Glacier (Archive)
+======================
+
+Features:
+----------------
+Storage class has a minimum storage duration period of 90 days
+Provides configurable retrieval times, from minutes to hours
+Vault Lock feature enforces compliance via a lockable policy
+
+For accessing GLACIER objects,
+→object must be restored which can taken anywhere between minutes to hours
+→ objects are only available for the time period (number of days) specified during the restoration request
+→ object’s storage class remains GLACIER
+→ charges are levied for both the archive (GLACIER rate) and the copy restored temporarily
+
+Best used for:
+------------------
+GLACIER storage class is suitable for low cost data archiving where data access is infrequent and retrieval time of minutes to hours is acceptable.
+
+Performance:
+-----------------
+Offers the same durability and resiliency as the STANDARD storage class
+
+Durability and Availability:
+-------------------------------
+Designed for 99.999999999% i.e. 11 9’s Durability of objects across AZs
+Designed for 99.9% availability over a given year
+
+Scalability and Elasticity:
+-----------------------------
+
+Pricing:
+----------------
+
+A real-time Use case:
+-------------------------
+
+
+S3 Glacier Deep Archive
+======================
+
+Features:
+----------------
+Ideal alternative to magnetic tape libraries.
+
+Best used for:
+------------------
+Has a minimum storage duration period of 180 days and can be accessed in at a default retrieval time of 12 hours.
+Supports long-term retention and digital preservation for data that may be accessed once or twice in a year
+
+Performance:
+-----------------
+
+Durability and Availability:
+-------------------------------
+Designed for 99.999999999% i.e. 11 9’s Durability of objects across AZs
+Designed for 99.9% availability over a given year
+
+Scalability and Elasticity:
+-----------------------------
+
+Pricing:
+----------------
+DEEP_ARCHIVE retrieval costs can be reduced by using bulk retrieval, which returns data within 48 hours.
+Retrieval costs can be reduced by using bulk retrieval.
+
+A real-time Use case:
+-------------------------
+It is ideal for those industries which store data for 5–10 years or longer like healthcare, finance, etc. It can also be used for backup and disaster recovery.
